@@ -4,10 +4,12 @@
 @tailwind utilities;
 
 h1,
-li {
-  font-family: "Anton", sans-serif !important;
+h2,
+li,
+button a {
+  font-family: "Anton", sans-serif;
 }
 
 p {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Inter", sans-serif;
 }

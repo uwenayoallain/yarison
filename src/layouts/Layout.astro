@@ -1,11 +1,11 @@
 ---
 import "@styles/global.css";
 interface Props {
-  title?: string,
-  className?: any,
+  title?: string;
+  className?: any;
 }
 
-const { title = "Home", className = ""} = Astro.props as Props;
+const { title = "Home", className = "" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +14,8 @@ const { title = "Home", className = ""} = Astro.props as Props;
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content='Yarison"s personal website!' />
     <title>{title}</title>
   </head>
   <body class={className}>

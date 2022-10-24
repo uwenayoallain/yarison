@@ -2,7 +2,7 @@
 interface Props {
   active: number;
 }
-
+import Logo from "./Logo.astro";
 const { active } = Astro.props as Props;
 const pages = [
   { route: "/", page: "Home" },
@@ -13,12 +13,15 @@ const pages = [
 ];
 ---
 
-<div class='justify-center items-center flex'>
-  <div>Yarison</div>
-  <ul class='list-none [&>li]:inline-block [&>li]:p-3'>
+<div class='justify-between items-center flex'>
+  <div><Logo /></div>
+  <ul class='list-none [&>li]:inline-block w-1/2'>
     {
       pages.map(({ route, page }, index) => (
-        <li class={`${index == active ? "" : "text-purple-600"}`}>
+        <li
+          class={`text-3xl p-2 m-2 ${
+            index == active ? "text-indigo-600" : ""
+          }`}>
           <a href={route}>{page}</a>
         </li>
       ))
