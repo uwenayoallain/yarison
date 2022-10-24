@@ -1,8 +1,10 @@
 ---
 interface Props {
-  title?: string;
+  title?: string,
+  className?: any,
 }
-const { title = "Home" } = Astro.props as Props;
+
+const { title = "Home", className = ""} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ const { title = "Home" } = Astro.props as Props;
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>{title}</title>
   </head>
-  <body>
+  <body class={className}>
     <slot />
   </body>
 </html>

@@ -11,6 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.5.2"
+    "@astrojs/tailwind": "^2.1.1",
+    "@barba/core": "^2.9.7",
+    "astro": "^1.5.2",
+    "gsap": "^3.11.3",
+    "tailwindcss": "^3.2.1"
   }
 }
