@@ -4,15 +4,23 @@ interface Props {
 }
 
 const { active } = Astro.props as Props;
-const pages = ["Home", "About", "Cases", "Work", "Contact"];
+const pages = [
+  { route: "/", page: "Home" },
+  { route: "/about", page: "About" },
+  { route: "/cases", page: "Cases" },
+  { route: "/work", page: "Work" },
+  { route: "/contact", page: "Contact" },
+];
 ---
 
 <div class='justify-center items-center flex'>
   <div>Yarison</div>
   <ul class='list-none [&>li]:inline-block [&>li]:p-3'>
     {
-      pages.map((page, index) => (
-        <li class={`${index == active ? "" : "text-purple-600"}`}>{page}</li>
+      pages.map(({ route, page }, index) => (
+        <li class={`${index == active ? "" : "text-purple-600"}`}>
+          <a href={route}>{page}</a>
+        </li>
       ))
     }
   </ul>

@@ -3,10 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  font-family: "Anton", sans-serif;
+h1,
+li {
+  font-family: "Anton", sans-serif !important;
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
 }
