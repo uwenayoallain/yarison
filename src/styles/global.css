@@ -9,7 +9,16 @@ li,
 button a {
   font-family: "Anton", sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 
 p {
   font-family: "Inter", sans-serif;
+}
+
+.cursor {
+  background: whitesmoke;
+  position: absolute;
+  display: none;
 }

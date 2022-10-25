@@ -13,15 +13,13 @@ const pages = [
 ];
 ---
 
-<div class='justify-between items-center flex'>
-  <div><Logo /></div>
+<div class='justify-between items-center flex select-none'>
+  <div class='ml-4'><Logo /></div>
   <ul class='list-none [&>li]:inline-block w-1/2'>
     {
       pages.map(({ route, page }, index) => (
         <li
-          class={`text-3xl p-2 m-2 ${
-            index == active ? "text-indigo-600" : ""
-          }`}>
+          class={`text-xl p-2 m-2 ${index == active ? "text-indigo-600" : ""}`}>
           <a href={route}>{page}</a>
         </li>
       ))

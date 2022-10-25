@@ -1,37 +1,89 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Nav from "@components/Nav.astro";
+import image from "@assets/yarison_transparent.png";
 ---
 
 <Layout className='bg-[#101318] text-white'>
+  <img
+    src={image}
+    alt='yarison image'
+    class='absolute border-2 border-red-600 cursor pointer-events-none'
+  />
   <Nav active={0} />
-  <div>
-    <div class='justify-start items-center flex my-3'>
-      <h1 class='text-9xl w-max'>CREATIVE</h1>
-      <div class='text-2xl px-1'>
-        <p>web development</p>
-        <p>backend development</p>
-        <p>ui/ux design</p>
-        <p>mobile development</p>
+  <div class='flex justify-center items-center h-screen'>
+    <div class='w-max'>
+      <div class='justify-start items-center flex my-3'>
+        <h1 class='text-9xl w-max'>CREATIVE</h1>
+        <div class='text-2xl px-1'>
+          <p>web development</p>
+          <p>backend development</p>
+          <p>ui/ux design</p>
+          <p>mobile development</p>
+        </div>
       </div>
-    </div>
-    <div class='my-3'>
-      <h1 class='text-9xl w-max'>DEVELOPER & DESIGNER</h1>
-    </div>
-    <div class='my-3 pl-3'>
-      <h2 class='text-indigo-600 text-xl'>UWENAYO Alain Pacifique</h2>
-    </div>
-    <div class='mt-6'>
-      <button>
-        <a href='/contact' class='bg-indigo-600 text-xl px-8 py-6 rounded-full'
-          >CONTACT</a
-        >
-      </button>
-      <button>
-        <a href='/contact' class='bg-indigo-600 text-xl px-8 py-6 rounded-full'
-          >CV</a
-        >
-      </button>
+      <div class='my-3'>
+        <h1 class='text-9xl w-max cursor-hover'>DEVELOPER & DESIGNER</h1>
+      </div>
+      <div class='my-3 pl-3'>
+        <h2 class='text-indigo-600 text-xl'>UWENAYO Alain Pacifique</h2>
+      </div>
+      <div class='my-12'>
+        <button>
+          <a
+            href='/contact'
+            class='bg-indigo-600 text-xl px-10 py-6 rounded-full ml-4'
+            >CONTACT</a
+          >
+        </button>
+        <button>
+          <a
+            href='/contact'
+            class='bg-[#101318] border border-indigo-600 text-xl py-6 px-[1.8rem] aspect-square rounded-full ml-4'
+            >CV</a
+          >
+        </button>
+      </div>
     </div>
   </div>
 </Layout>
+<script type='module'>
+  import gsap from "/node_modules/gsap";
+  function mousePosition() {
+    const position = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    window.addEventListener("pointermove", (e) => {
+      position.x = e.pageX;
+      position.y = e.pageY;
+    });
+    return position;
+  }
+  function followCursor() {
+    const cursor = document.querySelector(".cursor");
+    const mouse = mousePosition();
+    const pos = { x: mouse.x, y: mouse.y };
+    gsap.set(".cursor", { ...pos, scale: 0 });
+    const speed = 0.2;
+    const xSet = gsap.quickSetter(cursor, "x", "px");
+    const ySet = gsap.quickSetter(cursor, "y", "px");
+
+    gsap.ticker.add(() => {
+      const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+      pos.x += (mouse.x - pos.x) * dt;
+      pos.y += (mouse.y - pos.y) * dt;
+      xSet(pos.x);
+      ySet(pos.y);
+    });
+  }
+
+  const element = document.querySelector(".cursor-hover");
+  element.addEventListener("mouseenter", () => {
+    gsap.set(".cursor", { scale: 1 });
+    followCursor();
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.set(".cursor", {
+      scale: 0,
+    });
+  });
+</script>
