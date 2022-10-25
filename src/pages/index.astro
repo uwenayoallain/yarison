@@ -14,7 +14,7 @@ import image from "@assets/yarison.jpg";
   <div class='flex justify-center items-center h-screen'>
     <div class='w-max'>
       <div class='justify-start items-center flex my-3'>
-        <h1 class='text-9xl w-max relative cursor-hover'>CREATIVE</h1>
+        <h1 class='text-9xl w-max cursor-hover'>CREATIVE</h1>
         <div class='text-2xl px-1'>
           <p>web development</p>
           <p>backend development</p>
@@ -49,9 +49,9 @@ import image from "@assets/yarison.jpg";
 </Layout>
 <script type='module'>
   import gsap from "/node_modules/gsap";
-  const cursor = document.querySelector(".cursor");
 
   function followCursor() {
+    const cursor = document.querySelector(".cursor");
     window.addEventListener("mousemove", (e) => {
       const pos = {
         x: e.pageX - cursor.offsetWidth / 2,
@@ -76,7 +76,7 @@ import image from "@assets/yarison.jpg";
   const elements = document.querySelectorAll(".cursor-hover");
   elements.forEach((element) => {
     element.addEventListener("mouseenter", () => {
-      gsap.to(".cursor", { display: "block", duration: 1 });
+      gsap.set(".cursor", { display: "block", duration: 0.1, delay: 0.2 });
       followCursor();
     });
     element.addEventListener("mouseleave", () => {
