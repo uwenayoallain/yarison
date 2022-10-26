@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Nav from "@components/Nav.astro";
 import image from "@assets/yarison.jpg";
+import gsap from "gsap";
 ---
 
 <Layout className='bg-[#101318] text-white'>
@@ -48,8 +49,6 @@ import image from "@assets/yarison.jpg";
   </div>
 </Layout>
 <script type='module'>
-  import gsap from "/node_modules/gsap";
-
   function followCursor() {
     const cursor = document.querySelector(".cursor");
     window.addEventListener("mousemove", (e) => {
@@ -73,14 +72,12 @@ import image from "@assets/yarison.jpg";
     });
   }
 
-  const elements = document.querySelectorAll(".cursor-hover");
-  elements.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      gsap.set(".cursor", { display: "block", duration: 0.1, delay: 0.2 });
-      followCursor();
-    });
-    element.addEventListener("mouseleave", () => {
-      gsap.to(".cursor", { display: "none", duration: 0.1 });
-    });
+  const element = document.querySelector(".cursor-hover");
+  element.addEventListener("mouseenter", () => {
+    gsap.set(".cursor", { display: "block", duration: 0.1, delay: 0.2 });
+    followCursor();
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.to(".cursor", { display: "none", duration: 0.1 });
   });
 </script>
