@@ -2,7 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import Nav from "@components/Nav.astro";
 import image from "@assets/yarison.jpg";
-import gsap from "gsap";
 ---
 
 <Layout className='bg-[#101318] text-white'>
@@ -48,36 +47,7 @@ import gsap from "gsap";
     </div>
   </div>
 </Layout>
-<script type='module'>
-  function followCursor() {
-    const cursor = document.querySelector(".cursor");
-    window.addEventListener("mousemove", (e) => {
-      const pos = {
-        x: e.pageX - cursor.offsetWidth / 2,
-        y: e.pageY - cursor.offsetHeight / 2,
-      };
-      gsap.set(".cursor", pos);
-      const speed = 0.2;
-      const xSet = gsap.quickSetter(cursor, "x", "px");
-      const ySet = gsap.quickSetter(cursor, "y", "px");
-
-      gsap.ticker.add(() => {
-        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-
-        pos.x += (mouse.x - pos.x) * dt;
-        pos.y += (mouse.y - pos.y) * dt;
-        xSet(pos.x);
-        ySet(pos.y);
-      });
-    });
-  }
-
-  const element = document.querySelector(".cursor-hover");
-  element.addEventListener("mouseenter", () => {
-    gsap.set(".cursor", { display: "block", duration: 0.1, delay: 0.2 });
-    followCursor();
-  });
-  element.addEventListener("mouseleave", () => {
-    gsap.to(".cursor", { display: "none", duration: 0.1 });
-  });
+<script>
+  import Animate from "../scripts/index.js";
+  Animate();
 </script>
