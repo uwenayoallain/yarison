@@ -7,7 +7,7 @@ import Images from "@components/Images.astro";
 <Layout className='bg-[#101318] text-white'>
   <Images active={0} type={"cursor"} />
   <Nav active={0} />
-  <div class='flex justify-center items-center h-screen'>
+  <div class='flex justify-center items-center min-h-screen'>
     <div class='w-max'>
       <div class='justify-start items-center flex my-3'>
         <h1 class='text-9xl w-max cursor-hover'>CREATIVE</h1>
@@ -42,11 +42,11 @@ import Images from "@components/Images.astro";
       </div>
     </div>
   </div>
-  <div class='bg-white text-slate-900 h-screen grid grid-cols-2 relative'>
+  <div class='bg-white text-slate-900 min-h-screen grid grid-cols-2 relative'>
     <div class='p-4 flex flex-col justify-around h-5/6'>
       <div>
         <h4 class='text-indigo-600 text-6xl'>01</h4>
-        <h1 class='text-9xl w-max'>ABOUT ME</h1>
+        <h1 class='text-7xl w-max'>ABOUT ME</h1>
       </div>
       <div>
         <p class='text-justify text-2xl'>
@@ -69,11 +69,68 @@ import Images from "@components/Images.astro";
     <div class='flex justify-center items-center'>
       <Images active={1} />
     </div>
-    <div class='absolute bg-red-500 inset-x-0 bottom-0' id='animation-wrapper'>
+    <div
+      class='absolute grid grid-cols-6 bg-[#101318] inset-x-0 bottom-0'
+      id='animation-wrapper'
+    >
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
     </div>
   </div>
+  <div
+    class='bg-[#101318] text-white min-h-screen relative p-4 flex flex-col justify-around'
+  >
+    <div>
+      <h4 class='text-indigo-600 text-6xl'>02</h4>
+      <h1 class='text-7xl w-max'>CASES</h1>
+    </div>
+    <div class='text-3xl w-4/5 m-auto border-x border-white'>
+      <div class='flex justify-around py-6 px-3 border-b border-b-white'>
+        <h2 class='w-1/6'>ROUNDSPACE</h2>
+        <div class='w-4/6 text-xl'>
+          <p>
+            Derivering excellent digital innovation, user at center services
+          </p>
+        </div>
+      </div>
+      <div class='flex justify-around py-6 px-3 border-b border-b-white'>
+        <h2 class='w-1/6'>INSPIRELY</h2>
+        <div class='w-4/6 text-xl'>
+          <p>Get inspired all day long without leaving a single page</p>
+        </div>
+      </div>
+      <div class='flex justify-around py-6 px-3 border-b border-b-white'>
+        <h2 class='w-1/6'>ROUNDSPACE</h2>
+        <div class='w-4/6 text-xl'>
+          <p>
+            Derivering excellent digital innovation, user at center services
+          </p>
+        </div>
+      </div>
+      <div class='flex justify-around py-6 px-3 text-lg'>
+        <p class='text-indigo-600'>
+          <a href='/cases'>
+            <span class='px-3 py-2 pb-6 border-b border-b-white'>More</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class='bg-white text-slate-900 min-h-screen relative'>
+    <div class='p-4 h-full'>
+      <div>
+        <h4 class='text-indigo-600 text-6xl'>03</h4>
+        <h1 class='text-7xl w-max'>WORK</h1>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import Animate from "../scripts/index.js";
+    Animate();
+  </script>
 </Layout>
-<script>
-  import Animate from "../scripts/index.js";
-  Animate();
-</script>

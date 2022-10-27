@@ -21,9 +21,12 @@ export default function Animate() {
   element.addEventListener("mouseleave", () => {
     gsap.to(".cursor", { opacity: 0, duration: 0.1 });
   });
-
-  for (x = 0; x < 10; x++) {
-    const div = document.createElement("div");
-    document.getElementById("animation-wrapper").appendChild(div);
-  }
+  gsap.to(".bar", {
+    height: "random(30, 100)",
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power2.easeIn",
+    repeat: Infinity,
+    yoyo: true,
+  });
 }
