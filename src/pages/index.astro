@@ -1,15 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Nav from "@components/Nav.astro";
-import image from "@assets/yarison.jpg";
+import Images from "@components/Images.astro";
 ---
 
 <Layout className='bg-[#101318] text-white'>
-  <img
-    src={image}
-    alt='yarison image'
-    class='absolute cursor pointer-events-none rounded-md w-60'
-  />
+  <Images active={0} type={"cursor"} />
   <Nav active={0} />
   <div class='flex justify-center items-center h-screen'>
     <div class='w-max'>
@@ -44,6 +40,36 @@ import image from "@assets/yarison.jpg";
           >
         </button>
       </div>
+    </div>
+  </div>
+  <div class='bg-white text-slate-900 h-screen grid grid-cols-2 relative'>
+    <div class='p-4 flex flex-col justify-around h-5/6'>
+      <div>
+        <h4 class='text-indigo-600 text-6xl'>01</h4>
+        <h1 class='text-9xl w-max'>ABOUT ME</h1>
+      </div>
+      <div>
+        <p class='text-justify text-2xl'>
+          Hi, I am a developer and UX/ UI designer. My favorite part of my job
+          is working with talented people to create remarkable creations through
+          creative innovation. Through digital innovations, I hope to make the
+          world a better place.
+        </p>
+      </div>
+      <div class='my-6'>
+        <button>
+          <a
+            href='/about'
+            class='text-xl px-10 py-6 rounded-full ml-4 border-2 border-indigo-600'
+            >LEARN MORE</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class='flex justify-center items-center'>
+      <Images active={1} />
+    </div>
+    <div class='absolute bg-red-500 inset-x-0 bottom-0' id='animation-wrapper'>
     </div>
   </div>
 </Layout>

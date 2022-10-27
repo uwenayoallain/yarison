@@ -1,0 +1,23 @@
+---
+import image from "@assets/yarison.jpg";
+import image_two from "@assets/yarison_transparent.png";
+// const random = (min: number, max: number) =>
+//   Math.floor(Math.random() * (max - min)) + min;
+interface Props {
+  active: number;
+  type?: "" | "cursor";
+}
+const { active, type = "" } = Astro.props as Props;
+
+const images = [image, image_two];
+---
+
+<img
+  src={images[active]}
+  alt='yarison image'
+  class={`${
+    type == "cursor"
+      ? "cursor absolute pointer-events-none rounded-md w-60"
+      : ""
+  }`}
+/>
