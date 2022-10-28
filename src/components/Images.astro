@@ -3,8 +3,7 @@ import {Image} from "@astrojs/image/components";
 import image from "@assets/yarison.jpg";
 import image_two from "@assets/yarison_transparent.png";
 import image_three from "@assets/yarison_1.jpg";
-// const random = (min: number, max: number) =>
-//   Math.floor(Math.random() * (max - min)) + min;
+
 interface Props {
   active: number;
   type?: "" | "cursor";
@@ -20,7 +19,7 @@ const images = [image, image_two, image_three];
   alt={`yarison's image ${images[active]}`}
   class={`${
     type == "cursor"
-      ? "cursor absolute pointer-events-none rounded-md w-60"
+      ? "cursor absolute pointer-events-none rounded-md w-60 z-50"
       : ""
   } ${className}`}
 />

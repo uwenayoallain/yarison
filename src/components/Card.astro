@@ -1,0 +1,16 @@
+---
+import Images from "./Images.astro";
+interface Props {
+    active?:number;
+}
+
+const {active=0} = Astro.props as Props;
+---
+
+<div class="w-3/4 m-auto">
+    <Images active={active} className="rounded-xl" />
+</div>
+<script>
+    import Animate from "../scripts/card.js";
+    Animate();
+</script>
