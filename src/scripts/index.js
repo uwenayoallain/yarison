@@ -5,7 +5,7 @@ export default function Animate() {
   elements.forEach((element) => {
 
     element.addEventListener("mouseenter", () => {
-      gsap.set(".cursor", { opacity: 1 });
+      gsap.set(".cursor", { opacity: 1, delay:0.3 });
       element.addEventListener("mousemove", (e) => {
         const mouse = { x: e.pageX, y: e.pageY };
         const pos = {

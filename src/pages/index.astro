@@ -5,10 +5,17 @@ import Nav from "@components/Nav.astro";
 import Images from "@components/Images.astro";
 ---
 
-<Layout className="bg-[#101318] text-white">
+<Layout>
   <Images active={0} type={"cursor"} />
-  <Nav active={0} />
-  <div class="flex justify-center items-center min-h-screen relative">
+  <div
+    class="cursor-image bg-white/20 backdrop-blur-lg w-24 h-24 flex justify-center items-center rounded-full z-50 text-white text-xl"
+  >
+    View
+  </div>
+  <div
+    class="flex justify-center items-center min-h-screen relative bg-[#101318] text-white"
+  >
+    <Nav active={0} />
     <div class="w-max">
       <div class="justify-start items-center flex my-3">
         <h1 class="text-9xl w-max cursor-hover">CREATIVE</h1>
@@ -143,9 +150,9 @@ import Images from "@components/Images.astro";
         </div>
         <p class="text-indigo-600 text-base pl-2">Featured projects</p>
       </div>
-      <div class="grid grid-cols-2 gap-6 py-4">
+      <div class="grid grid-cols-2 gap-6 py-4 cards">
         <div class="mt-10">
-          <Card active={2}/>
+          <Card active={2} />
         </div>
         <div>
           <Card />
@@ -154,7 +161,7 @@ import Images from "@components/Images.astro";
           <Card />
         </div>
         <div class="mt-10">
-          <Card  active={2}/>
+          <Card active={2} />
         </div>
       </div>
       <div>

@@ -1,14 +1,17 @@
 ---
 import Images from "./Images.astro";
 interface Props {
-    active?:number;
+    active?: number;
 }
 
-const {active=0} = Astro.props as Props;
+const { active = 0 } = Astro.props as Props;
 ---
 
-<div class="w-3/4 m-auto">
-    <Images active={active} className="rounded-xl" />
+<div class="w-3/4 m-auto cursor-pointer group relative">
+    <div class="card absolute inset-10"/>
+    <div>
+        <Images active={active} className="rounded-xl" />
+    </div>
 </div>
 <script>
     import Animate from "../scripts/card.js";

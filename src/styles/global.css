@@ -19,11 +19,14 @@ p {
   font-family: "Inter", sans-serif;
 }
 
-.cursor {
+.cursor, .cursor-image {
   position: absolute;
-  opacity: 0;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center center;
 }
+
 
 .bar {
   @apply h-12 bg-white;
