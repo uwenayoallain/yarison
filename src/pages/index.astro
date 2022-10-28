@@ -7,7 +7,7 @@ import Images from "@components/Images.astro";
 <Layout className='bg-[#101318] text-white'>
   <Images active={0} type={"cursor"} />
   <Nav active={0} />
-  <div class='flex justify-center items-center min-h-screen'>
+  <div class='flex justify-center items-center min-h-screen relative'>
     <div class='w-max'>
       <div class='justify-start items-center flex my-3'>
         <h1 class='text-9xl w-max cursor-hover'>CREATIVE</h1>
@@ -40,6 +40,9 @@ import Images from "@components/Images.astro";
           >
         </button>
       </div>
+      <div class='absolute bottom-20 right-3 rotate-90'>
+        <h1>SCROLL</h1>
+      </div>
     </div>
   </div>
   <div class='bg-white text-slate-900 min-h-screen grid grid-cols-2 relative'>
@@ -70,9 +73,13 @@ import Images from "@components/Images.astro";
       <Images active={1} />
     </div>
     <div
-      class='absolute grid grid-cols-6 bg-[#101318] inset-x-0 bottom-0'
+      class='absolute grid grid-cols-10 bg-[#101318] inset-x-0 bottom-0'
       id='animation-wrapper'
     >
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
       <div class='bar'></div>
       <div class='bar'></div>
       <div class='bar'></div>
@@ -120,15 +127,54 @@ import Images from "@components/Images.astro";
       </div>
     </div>
   </div>
-  <div class='bg-white text-slate-900 min-h-screen relative'>
+  <div class='bg-white text-slate-900 min-h-screen relative pb-20'>
     <div class='p-4 h-full'>
       <div>
         <h4 class='text-indigo-600 text-6xl'>03</h4>
-        <h1 class='text-7xl w-max'>WORK</h1>
+        <div class='flex justify-between items-center'>
+          <h1 class='text-7xl w-max'>WORK</h1>
+          <div class='w-2/5'>
+            <p class='w-3/5 text-lg text-justify'>
+              passionate cases that i passionately built for clients or friends
+              over the years.
+            </p>
+          </div>
+        </div>
+        <p class='text-indigo-600 text-base pl-2'>Featured projects</p>
+      </div>
+      <div class='grid grid-cols-2 gap-6 py-4'>
+        <div class='mt-10'>
+          <div class='w-3/4 m-auto'>
+            <Images active={2} className='rounded-xl' />
+          </div>
+        </div>
+        <div>
+          <div class='w-3/4 m-auto'>
+            <Images active={0} className='rounded-xl' />
+          </div>
+        </div>
+        <div>
+          <div class='w-3/4 m-auto'>
+            <Images active={0} className='rounded-xl' />
+          </div>
+        </div>
+        <div class='mt-10'>
+          <div class='w-3/4 m-auto'>
+            <Images active={2} className='rounded-xl' />
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class='text-indigo-600 text-center mt-2'>
+          <a href='/cases'>
+            <span class='px-3 py-2 pb-6 border-b border-b-indigo-600'
+              >More Projects</span
+            >
+          </a>
+        </p>
       </div>
     </div>
   </div>
-
   <script>
     import Animate from "../scripts/index.js";
     Animate();
