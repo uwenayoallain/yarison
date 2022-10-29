@@ -6,7 +6,7 @@ export default function Animation() {
     elements.forEach((element) => {
         element.addEventListener("mouseenter", () => {
             const rect = element.getBoundingClientRect();
-            gsap.to(cursor, { opacity: 1,delay: 0.3, duration: 0.1 });
+            gsap.to(cursor, { opacity: 1,delay: 0.1, duration: 0.1 });
             element.addEventListener("mousemove", (e) => {
                 const mouse = { x: e.pageX, y: e.pageY };
                 const pos = {
@@ -18,7 +18,7 @@ export default function Animation() {
             });
         });
         element.addEventListener("mouseleave", () => {
-            gsap.to(cursor, { opacity: 0,delay: 0.3, duration: 0.1 });
+            gsap.to(cursor, { opacity: 0,delay: 0.1, duration: 0.1 });
         });
     })
 }

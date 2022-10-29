@@ -1,5 +1,5 @@
 ---
-import {Image} from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 import image from "@assets/yarison.jpg";
 import image_two from "@assets/yarison_transparent.png";
 import image_three from "@assets/yarison_1.jpg";
@@ -22,4 +22,5 @@ const images = [image, image_two, image_three];
       ? "cursor absolute pointer-events-none rounded-md w-60 z-50"
       : ""
   } ${className}`}
+  placeholder="blur"
 />
