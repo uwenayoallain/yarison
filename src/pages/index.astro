@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Card from "@components/Card.astro";
 import Nav from "@components/Nav.astro";
 import Images from "@components/Images.astro";
+import Logo from "@components/Logo.astro";
 
 const skills = {
   front: [
@@ -198,7 +199,7 @@ const skills = {
   <div class="bg-white text-slate-900 min-h-screen relative pb-20">
     <div class="p-4 h-full">
       <div>
-        <h4 class="text-indigo-600 text-6xl">03</h4>
+        <h4 class="text-indigo-600 text-6xl">04</h4>
         <h1 class="text-5xl w-max">SKILLS</h1>
       </div>
       <p class="text-indigo-600 text-sm pl-2">Areas of expectise</p>
@@ -212,7 +213,7 @@ const skills = {
         </p>
         <div class="flex flex-wrap my-6">
           {
-            skills.front.map((skill, index) => {
+            skills.front.map((skill) => {
               return (
                 <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
                   {skill}
@@ -225,13 +226,12 @@ const skills = {
       <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
         <h1 class="text-4xl text-center mt-3 mb-6">BACKEND DEVELOPMENT</h1>
         <p class="text-xl my-3">
-          Always finding
-          solutions, i am passionate and hard working, aiming to change the world for
-          better.
+          Always finding solutions, i am passionate and hard working, aiming to
+          change the world for better.
         </p>
         <div class="flex flex-wrap my-6">
           {
-            skills.back.map((skill, index) => {
+            skills.back.map((skill) => {
               return (
                 <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
                   {skill}
@@ -241,6 +241,16 @@ const skills = {
           }
         </div>
       </div>
+    </div>
+  </div>
+  <div class="bg-[#101318] text-white min-h-screen relative pb-20">
+    <div class="h-96 bg-pattern border border-gray-700"></div>
+    <div class="grid grid-cols-2 !text-white">
+      <div>
+        <div class="w-full h-24 bg-logo"></div>
+        <p class="text-3xl">CREATIVE DEVELOPER & DESIGNER</p>
+      </div>
+      <div class="h-full bg-red-500"></div>
     </div>
   </div>
   <script>
