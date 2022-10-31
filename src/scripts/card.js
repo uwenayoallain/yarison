@@ -5,11 +5,10 @@ export default function Animation() {
     const cursor = document.querySelector(".cursor-image");
     elements.forEach((element,key) => {
         const cardTitles = document.querySelectorAll(".card-title");
-        console.table(cardTitles, key)
-        // const title = cardTitles[elements.indexOf(element)];
+        const title = cardTitles[key];
         element.addEventListener("mouseenter", () => {
             gsap.to(cursor, { opacity: 1, delay: 0.1, duration: 0.1 });
-            // gsap.to(title, { opacity: 1, delay: 0.1, duration: 0.1 });
+            gsap.to(title, { opacity: 1, delay: 0.1, duration: 0.1 });
             element.addEventListener("mousemove", (e) => {
                 const mouse = { x: e.pageX, y: e.pageY };
                 const pos = {
@@ -22,7 +21,7 @@ export default function Animation() {
         });
         element.addEventListener("mouseleave", () => {
             gsap.to(cursor, { opacity: 0, delay: 0.1, duration: 0.1 });
-            // gsap.to(title, { opacity: 0, delay: 0.1, duration: 0.1 });
+            gsap.to(title, { opacity: 0, delay: 0.1, duration: 0.1 });
         });
     })
 }

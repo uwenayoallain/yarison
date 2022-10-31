@@ -3,6 +3,18 @@ import Layout from "@layouts/Layout.astro";
 import Card from "@components/Card.astro";
 import Nav from "@components/Nav.astro";
 import Images from "@components/Images.astro";
+
+const skills = {
+  front: [
+    "ReactJs",
+    "NextJs",
+    "Animations",
+    "RemixJs",
+    "CSS FrameWorks",
+    "JavaScript FrameWorks",
+  ],
+  back: ["NodeJs", "TypeScript", "Java", "Laravel", "Python", "Cpp"],
+};
 ---
 
 <Layout>
@@ -57,7 +69,7 @@ import Images from "@components/Images.astro";
     <div class="p-4 flex flex-col justify-around h-5/6">
       <div>
         <h4 class="text-indigo-600 text-6xl">01</h4>
-        <h1 class="text-7xl w-max">ABOUT ME</h1>
+        <h1 class="text-5xl w-max">ABOUT ME</h1>
       </div>
       <div>
         <p class="text-justify text-2xl">
@@ -101,7 +113,7 @@ import Images from "@components/Images.astro";
   >
     <div>
       <h4 class="text-indigo-600 text-6xl">02</h4>
-      <h1 class="text-7xl w-max">CASES</h1>
+      <h1 class="text-5xl w-max">CASES</h1>
     </div>
     <div class="text-3xl w-4/5 m-auto border-x border-white">
       <div class="flex justify-around py-6 px-3 border-b border-b-white">
@@ -140,7 +152,7 @@ import Images from "@components/Images.astro";
       <div>
         <h4 class="text-indigo-600 text-6xl">03</h4>
         <div class="flex justify-between items-center">
-          <h1 class="text-7xl w-max">WORK</h1>
+          <h1 class="text-5xl w-max">WORK</h1>
           <div class="w-2/5">
             <p class="w-3/5 text-lg text-justify">
               passionate cases that i passionately built for clients or friends
@@ -148,20 +160,28 @@ import Images from "@components/Images.astro";
             </p>
           </div>
         </div>
-        <p class="text-indigo-600 text-base pl-2">Featured projects</p>
+        <p class="text-indigo-600 text-sm pl-2">Featured projects</p>
       </div>
       <div class="grid grid-cols-2 gap-6 py-4 cards">
         <div class="mt-10">
-          <Card active={2} />
+          <Card
+            active={2}
+            title="ARTERM"
+            subtitle="Awesome Designs in AR and VR"
+          />
         </div>
         <div>
-          <Card />
+          <Card title="ARTERM" />
         </div>
         <div>
-          <Card />
+          <Card title="ARTERM" />
         </div>
         <div class="mt-10">
-          <Card active={2} />
+          <Card
+            active={2}
+            title="ARTERM"
+            subtitle="Awesome Designs in AR and VR"
+          />
         </div>
       </div>
       <div>
@@ -172,6 +192,54 @@ import Images from "@components/Images.astro";
             >
           </a>
         </p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white text-slate-900 min-h-screen relative pb-20">
+    <div class="p-4 h-full">
+      <div>
+        <h4 class="text-indigo-600 text-6xl">03</h4>
+        <h1 class="text-5xl w-max">SKILLS</h1>
+      </div>
+      <p class="text-indigo-600 text-sm pl-2">Areas of expectise</p>
+    </div>
+    <div class="flex justify-evenly">
+      <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
+        <h1 class="text-4xl text-center mt-3 mb-6">FRONTEND DEVELOPMENT</h1>
+        <p class="text-xl my-3">
+          I like bringing ideas to life in the browser, with digital
+          innovations.
+        </p>
+        <div class="flex flex-wrap my-6">
+          {
+            skills.front.map((skill, index) => {
+              return (
+                <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
+                  {skill}
+                </span>
+              );
+            })
+          }
+        </div>
+      </div>
+      <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
+        <h1 class="text-4xl text-center mt-3 mb-6">BACKEND DEVELOPMENT</h1>
+        <p class="text-xl my-3">
+          Always finding
+          solutions, i am passionate and hard working, aiming to change the world for
+          better.
+        </p>
+        <div class="flex flex-wrap my-6">
+          {
+            skills.back.map((skill, index) => {
+              return (
+                <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
+                  {skill}
+                </span>
+              );
+            })
+          }
+        </div>
       </div>
     </div>
   </div>

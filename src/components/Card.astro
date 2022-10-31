@@ -2,9 +2,11 @@
 import Images from "./Images.astro";
 interface Props {
     active?: number;
+    title: string;
+    subtitle?: string;    
 }
 
-const { active = 0 } = Astro.props as Props;
+const { active = 0, title, subtitle=title } = Astro.props as Props;
 ---
 
 <div class="w-3/4 m-auto cursor-pointer group relative">
@@ -13,8 +15,8 @@ const { active = 0 } = Astro.props as Props;
         <Images active={active} className="rounded-xl" />
     </div>
     <div class="flex justify-around items-center opacity-0 card-title">
-        <h1>ARTERM</h1>
-        <p>Awesome Designs in AR </p>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
     </div>
 </div>
 <script>
