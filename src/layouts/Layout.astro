@@ -23,10 +23,8 @@ const { title = "Home", className = "" } = Astro.props as Props;
     />
     <title>{title}</title>
   </head>
-  <body class={className}>
-    <div data-scroll-container>
-      <slot />
-    </div>
+  <body class={className} data-barba="wrapper" data-scroll-container>
+    <slot />
     <script>
       import Animate from "../scripts/layout.js";
       Animate();
