@@ -3,8 +3,24 @@ import Layout from "@layouts/Layout.astro";
 import Card from "@components/Card.astro";
 import Nav from "@components/Nav.astro";
 import Images from "@components/Images.astro";
-import Logo from "@components/Logo.astro";
 
+const links = {
+  social: [
+    { route: "https://twitter.com/uwenayoallain/", page: "Twitter" },
+    { route: "https://linkedin.com/in/uwenayoallain/", page: "Linkedin" },
+    { route: "https://instagram.com/uwenayoallain/", page: "Instagram" },
+    { route: "https://dribbble.com/uwennayoallain/", page: "Dribbble" },
+    { route: "https://github.com/uwenayoallain/", page: "Github" },
+    { route: "https://behance.net/uwenayoallain/", page: "Behance" },
+  ],
+  site: [
+    { route: "/", page: "Home" },
+    { route: "/about", page: "About" },
+    { route: "/cases", page: "Cases" },
+    { route: "/work", page: "Work" },
+    { route: "/contact", page: "Contact" },
+  ],
+};
 const skills = {
   front: [
     "ReactJs",
@@ -245,19 +261,74 @@ const skills = {
   </div>
   <div class="bg-[#101318] text-white min-h-screen relative pb-20">
     <div class="h-96 bg-pattern border border-gray-700"></div>
-    <div class="grid grid-cols-2 !text-white">
-      <div>
-        <div class="w-1/2 m-auto">
-          <div class="w-full h-24 bg-logo"></div>
-          <p class="text-3xl">Creative Developer & Designer</p>
-        </div>
+    <div class="grid grid-cols-2 !text-white items-center">
+      <div class="w-1/2 m-auto h-full">
+        <div class="w-full h-24 bg-logo"></div>
+        <p class="text-3xl">Creative Developer & Designer</p>
       </div>
-      <div class="bg-black grid grid-cols-5 h-64 items-center overflow-hidden">
+      <div
+        class="bg-black grid grid-cols-5 h-64 items-center overflow-hidden gap-[0.5px]"
+      >
         <div class="verticle"></div>
         <div class="verticle"></div>
         <div class="verticle"></div>
         <div class="verticle"></div>
         <div class="verticle"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="">
+        <form class="w-2/3 m-auto">
+          <div>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl"
+            />
+          </div>
+          <div>
+            <textarea
+              name="content"
+              id="content"
+              placeholder="Content"
+              cols="1"
+              class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl resize-none"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="bg-indigo-600 text-xl px-14 py-6 rounded-full m-auto block"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-2">
+        <div>
+          <ul class="list-none">
+            {
+              links.site.map(({ route, page }) => (
+                <li class={`text-xl p-2 m-2`}>
+                  <a href={route}>{page}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <ul class="list-none">
+            {
+              links.social.map(({ route, page }) => (
+                <li class={`text-xl p-2 m-2`}>
+                  <a href={route}>{page}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
   </div>

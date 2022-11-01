@@ -1,4 +1,4 @@
-import gsap, { random } from "gsap";
+import gsap from "gsap";
 
 export default function Animate() {
   const elements = document.querySelectorAll(".cursor-hover");
@@ -29,7 +29,7 @@ export default function Animate() {
     yoyo: true,
   });
   gsap.to(".verticle", {
-    y: "random(50,100)" + "px",
+    y: "random(-80,80,5)" + "px",
     duration: 0.8,
     stagger: 0.2,
     ease: "power2.easeIn",
