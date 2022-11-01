@@ -28,8 +28,12 @@ p {
   transform-origin: center center;
 }
 
+.verticle {
+  @apply h-full bg-[#101318] border border-gray-700;
+}
+
 .bar {
-  @apply h-12 bg-white;
+  @apply h-12 bg-[#101318] border border-gray-700;
 }
 
 .bg-pattern {

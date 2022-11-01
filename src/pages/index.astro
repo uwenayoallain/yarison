@@ -94,7 +94,7 @@ const skills = {
       <Images active={1} />
     </div>
     <div
-      class="absolute grid grid-cols-10 bg-[#101318] inset-x-0 bottom-0"
+      class="absolute grid grid-cols-10 inset-x-0 bottom-0 items-baseline gap-[0.2px]"
       id="animation-wrapper"
     >
       <div class="bar"></div>
@@ -116,8 +116,8 @@ const skills = {
       <h4 class="text-indigo-600 text-6xl">02</h4>
       <h1 class="text-5xl w-max">CASES</h1>
     </div>
-    <div class="text-3xl w-4/5 m-auto border-x border-white">
-      <div class="flex justify-around py-6 px-3 border-b border-b-white">
+    <div class="text-3xl w-4/5 m-auto border-x border-gray-700">
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
         <h2 class="w-1/6">ROUNDSPACE</h2>
         <div class="w-4/6 text-xl">
           <p>
@@ -125,13 +125,13 @@ const skills = {
           </p>
         </div>
       </div>
-      <div class="flex justify-around py-6 px-3 border-b border-b-white">
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
         <h2 class="w-1/6">INSPIRELY</h2>
         <div class="w-4/6 text-xl">
           <p>Get inspired all day long without leaving a single page</p>
         </div>
       </div>
-      <div class="flex justify-around py-6 px-3 border-b border-b-white">
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
         <h2 class="w-1/6">ROUNDSPACE</h2>
         <div class="w-4/6 text-xl">
           <p>
@@ -142,7 +142,7 @@ const skills = {
       <div class="flex justify-around py-6 px-3 text-lg">
         <p class="text-indigo-600">
           <a href="/cases">
-            <span class="px-3 py-2 pb-6 border-b border-b-white">More</span>
+            <span class="px-3 py-2 pb-6 border-b border-b-gray-700">More</span>
           </a>
         </p>
       </div>
@@ -247,10 +247,18 @@ const skills = {
     <div class="h-96 bg-pattern border border-gray-700"></div>
     <div class="grid grid-cols-2 !text-white">
       <div>
-        <div class="w-full h-24 bg-logo"></div>
-        <p class="text-3xl">CREATIVE DEVELOPER & DESIGNER</p>
+        <div class="w-1/2 m-auto">
+          <div class="w-full h-24 bg-logo"></div>
+          <p class="text-3xl">Creative Developer & Designer</p>
+        </div>
       </div>
-      <div class="h-full bg-red-500"></div>
+      <div class="bg-black grid grid-cols-5 h-64 items-center overflow-hidden">
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+      </div>
     </div>
   </div>
   <script>
