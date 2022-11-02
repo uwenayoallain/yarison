@@ -3,9 +3,12 @@ import Layout from "@layouts/Layout.astro";
 import Nav from "@components/Nav.astro";
 ---
 
-<Layout className='bg-[#101318] text-white'>
-  <div data-barba="container" data-barba-namespace="about">
+<Layout
+    className="bg-[#101318] text-white"
+    barba="container"
+    namespace="about"
+    title="About"
+>
     <Nav active={1} />
     <div></div>
-  </div>
 </Layout>

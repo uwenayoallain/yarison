@@ -34,313 +34,310 @@ const skills = {
 };
 ---
 
-<Layout>
-  <div data-barba="container" data-barba-namespace="home">
-    <Images active={0} type={"cursor"} />
-    <div
-      class="cursor-image bg-white/20 backdrop-blur-lg w-24 h-24 flex justify-center items-center rounded-full z-50 text-white text-xl"
-    >
-      View
-    </div>
-    <div
-      class="flex justify-center items-center min-h-screen relative bg-[#101318] text-white"
-    >
-      <Nav active={0} />
-      <div class="w-max">
-        <div class="justify-start items-center flex my-3">
-          <h1 class="text-9xl w-max cursor-hover">CREATIVE</h1>
-          <div class="text-2xl px-1">
-            <p>web development</p>
-            <p>backend development</p>
-            <p>ui/ux design</p>
-            <p>mobile development</p>
-          </div>
-        </div>
-        <div class="my-3">
-          <h1 class="text-9xl w-max cursor-hover">DEVELOPER & DESIGNER</h1>
-        </div>
-        <div class="my-3 pl-3">
-          <h2 class="text-indigo-600 text-xl">UWENAYO Alain Pacifique</h2>
-        </div>
-        <div class="my-12">
-          <button>
-            <a
-              href="/contact"
-              class="bg-indigo-600 text-xl px-10 py-6 rounded-full ml-4"
-              >Contant</a
-            >
-          </button>
-          <button>
-            <a
-              href="/contact"
-              class="bg-[#101318] border border-indigo-600 text-xl py-6 px-[1.8rem] aspect-square rounded-full ml-4"
-              >Cv</a
-            >
-          </button>
-        </div>
-        <div class="absolute bottom-20 right-3 rotate-90">
-          <p>Scroll</p>
+<Layout barba="container" namespace="home" title="Home">
+  <Images active={0} type={"cursor"} />
+  <div
+    class="cursor-image bg-white/20 backdrop-blur-lg w-24 h-24 flex justify-center items-center rounded-full z-50 text-white text-xl"
+  >
+    View
+  </div>
+  <div
+    class="flex justify-center items-center min-h-screen relative bg-[#101318] text-white"
+  >
+    <Nav active={0} />
+    <div class="w-max">
+      <div class="justify-start items-center flex my-3">
+        <h1 class="text-9xl w-max cursor-hover">CREATIVE</h1>
+        <div class="text-2xl px-1">
+          <p>web development</p>
+          <p>backend development</p>
+          <p>ui/ux design</p>
+          <p>mobile development</p>
         </div>
       </div>
-    </div>
-    <div class="bg-white text-slate-900 min-h-screen grid grid-cols-2 relative">
-      <div class="p-4 flex flex-col justify-around h-5/6">
-        <div>
-          <h4 class="text-indigo-600 text-6xl">01</h4>
-          <h1 class="text-5xl w-max">ABOUT ME</h1>
-        </div>
-        <div>
-          <p class="text-justify text-2xl">
-            Hi, I am a developer and UX/ UI designer. My favorite part of my job
-            is working with talented people to create remarkable creations
-            through creative innovation. Through digital innovations, I hope to
-            make the world a better place.
-          </p>
-        </div>
-        <div class="my-6">
-          <button>
-            <a
-              href="/about"
-              class="text-xl px-10 py-6 rounded-full ml-4 border-2 border-indigo-600"
-              >Learn more</a
-            >
-          </button>
-        </div>
+      <div class="my-3">
+        <h1 class="text-9xl w-max cursor-hover">DEVELOPER & DESIGNER</h1>
       </div>
-      <div class="flex justify-center items-center">
-        <Images active={1} />
+      <div class="my-3 pl-3">
+        <h2 class="text-indigo-600 text-xl">UWENAYO Alain Pacifique</h2>
       </div>
-      <div
-        class="absolute grid grid-cols-10 inset-x-0 bottom-0 items-baseline gap-[0.2px]"
-        id="animation-wrapper"
-      >
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </div>
-    <div
-      class="bg-[#101318] text-white min-h-screen relative p-4 flex flex-col justify-around"
-    >
-      <div>
-        <h4 class="text-indigo-600 text-6xl">02</h4>
-        <h1 class="text-5xl w-max">CASES</h1>
-      </div>
-      <div class="text-3xl w-4/5 m-auto border-x border-gray-700">
-        <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
-          <h2 class="w-1/6">ROUNDSPACE</h2>
-          <div class="w-4/6 text-xl">
-            <p>
-              Derivering excellent digital innovation, user at center services
-            </p>
-          </div>
-        </div>
-        <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
-          <h2 class="w-1/6">INSPIRELY</h2>
-          <div class="w-4/6 text-xl">
-            <p>Get inspired all day long without leaving a single page</p>
-          </div>
-        </div>
-        <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
-          <h2 class="w-1/6">ROUNDSPACE</h2>
-          <div class="w-4/6 text-xl">
-            <p>
-              Derivering excellent digital innovation, user at center services
-            </p>
-          </div>
-        </div>
-        <div class="flex justify-around py-6 px-3 text-lg">
-          <p class="text-indigo-600">
-            <a href="/cases">
-              <span class="px-3 py-2 pb-6 border-b border-b-gray-700">More</span
-              >
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white text-slate-900 min-h-screen relative pb-20">
-      <div class="p-4 h-full">
-        <div>
-          <h4 class="text-indigo-600 text-6xl">03</h4>
-          <div class="flex justify-between items-center">
-            <h1 class="text-5xl w-max">WORK</h1>
-            <div class="w-2/5">
-              <p class="w-3/5 text-lg text-justify">
-                passionate cases that i passionately built for clients or
-                friends over the years.
-              </p>
-            </div>
-          </div>
-          <p class="text-indigo-600 text-sm pl-2">Featured projects</p>
-        </div>
-        <div class="grid grid-cols-2 gap-6 py-4 cards">
-          <div class="mt-10">
-            <Card
-              active={2}
-              title="ARTERM"
-              subtitle="Awesome Designs in AR and VR"
-            />
-          </div>
-          <div>
-            <Card title="ARTERM" />
-          </div>
-          <div>
-            <Card title="ARTERM" />
-          </div>
-          <div class="mt-10">
-            <Card
-              active={2}
-              title="ARTERM"
-              subtitle="Awesome Designs in AR and VR"
-            />
-          </div>
-        </div>
-        <div>
-          <p class="text-indigo-600 text-center mt-2">
-            <a href="/cases">
-              <span class="px-3 py-2 pb-6 border-b border-b-indigo-600"
-                >More Projects</span
-              >
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white text-slate-900 min-h-screen relative pb-20">
-      <div class="p-4 h-full">
-        <div>
-          <h4 class="text-indigo-600 text-6xl">04</h4>
-          <h1 class="text-5xl w-max">SKILLS</h1>
-        </div>
-        <p class="text-indigo-600 text-sm pl-2">Areas of expectise</p>
-      </div>
-      <div class="flex justify-evenly">
-        <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
-          <h1 class="text-4xl text-center mt-3 mb-6">FRONTEND DEVELOPMENT</h1>
-          <p class="text-xl my-3">
-            I like bringing ideas to life in the browser, with digital
-            innovations.
-          </p>
-          <div class="flex flex-wrap my-6">
-            {
-              skills.front.map((skill) => {
-                return (
-                  <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
-                    {skill}
-                  </span>
-                );
-              })
-            }
-          </div>
-        </div>
-        <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
-          <h1 class="text-4xl text-center mt-3 mb-6">BACKEND DEVELOPMENT</h1>
-          <p class="text-xl my-3">
-            Always finding solutions, i am passionate and hard working, aiming
-            to change the world for better.
-          </p>
-          <div class="flex flex-wrap my-6">
-            {
-              skills.back.map((skill) => {
-                return (
-                  <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
-                    {skill}
-                  </span>
-                );
-              })
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-[#101318] text-white min-h-screen relative pb-20">
-      <div class="h-96 bg-pattern border border-gray-700"></div>
-      <div class="grid grid-cols-2 !text-white items-center">
-        <div class="w-1/2 m-auto h-full">
-          <div class="w-full h-24 bg-logo"></div>
-          <p class="text-3xl">Creative Developer & Designer</p>
-        </div>
-        <div
-          class="bg-black grid grid-cols-5 h-64 items-center overflow-hidden gap-[0.5px]"
-        >
-          <div class="verticle"></div>
-          <div class="verticle"></div>
-          <div class="verticle"></div>
-          <div class="verticle"></div>
-          <div class="verticle"></div>
-        </div>
-      </div>
-      <div class="grid grid-cols-2">
-        <div class="">
-          <form class="w-2/3 m-auto">
-            <div>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Email"
-                class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl"
-              />
-            </div>
-            <div>
-              <textarea
-                name="content"
-                id="content"
-                placeholder="Content"
-                cols="1"
-                class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl resize-none"
-              ></textarea>
-            </div>
-            <div>
-              <button
-                class="bg-indigo-600 text-xl px-14 py-6 rounded-full m-auto block"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="grid grid-cols-2">
-          <div>
-            <ul class="list-none">
-              {
-                links.site.map(({ route, page }) => (
-                  <li class={`text-xl p-2 m-2`}>
-                    <a href={route}>{page}</a>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-          <div>
-            <ul class="list-none">
-              {
-                links.social.map(({ route, page }) => (
-                  <li class={`text-xl p-2 m-2`}>
-                    <a href={route}>{page}</a>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p class="text-center">
-          Made with 💖 by <a href="/links" class="text-indigo-600"
-            >@uwenayoallain</a
+      <div class="my-12">
+        <button>
+          <a
+            href="/contact"
+            class="bg-indigo-600 text-xl px-10 py-6 rounded-full ml-4"
+            >Contant</a
           >
-          {new Date().getFullYear()} with {Astro.generator}
+        </button>
+        <button>
+          <a
+            href="/contact"
+            class="bg-[#101318] border border-indigo-600 text-xl py-6 px-[1.8rem] aspect-square rounded-full ml-4"
+            >Cv</a
+          >
+        </button>
+      </div>
+      <div class="absolute bottom-20 right-3 rotate-90">
+        <p>Scroll</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white text-slate-900 min-h-screen grid grid-cols-2 relative">
+    <div class="p-4 flex flex-col justify-around h-5/6">
+      <div>
+        <h4 class="text-indigo-600 text-6xl">01</h4>
+        <h1 class="text-5xl w-max">ABOUT ME</h1>
+      </div>
+      <div>
+        <p class="text-justify text-2xl">
+          Hi, I am a developer and UX/ UI designer. My favorite part of my job
+          is working with talented people to create remarkable creations through
+          creative innovation. Through digital innovations, I hope to make the
+          world a better place.
         </p>
       </div>
+      <div class="my-6">
+        <button>
+          <a
+            href="/about"
+            class="text-xl px-10 py-6 rounded-full ml-4 border-2 border-indigo-600"
+            >Learn more</a
+          >
+        </button>
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+      <Images active={1} />
+    </div>
+    <div
+      class="absolute grid grid-cols-10 inset-x-0 bottom-0 items-baseline gap-[0.2px]"
+      id="animation-wrapper"
+    >
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <div
+    class="bg-[#101318] text-white min-h-screen relative p-4 flex flex-col justify-around"
+  >
+    <div>
+      <h4 class="text-indigo-600 text-6xl">02</h4>
+      <h1 class="text-5xl w-max">CASES</h1>
+    </div>
+    <div class="text-3xl w-4/5 m-auto border-x border-gray-700">
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
+        <h2 class="w-1/6">ROUNDSPACE</h2>
+        <div class="w-4/6 text-xl">
+          <p>
+            Derivering excellent digital innovation, user at center services
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
+        <h2 class="w-1/6">INSPIRELY</h2>
+        <div class="w-4/6 text-xl">
+          <p>Get inspired all day long without leaving a single page</p>
+        </div>
+      </div>
+      <div class="flex justify-around py-6 px-3 border-b border-b-gray-700">
+        <h2 class="w-1/6">ROUNDSPACE</h2>
+        <div class="w-4/6 text-xl">
+          <p>
+            Derivering excellent digital innovation, user at center services
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-around py-6 px-3 text-lg">
+        <p class="text-indigo-600">
+          <a href="/cases">
+            <span class="px-3 py-2 pb-6 border-b border-b-gray-700">More</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white text-slate-900 min-h-screen relative pb-20">
+    <div class="p-4 h-full">
+      <div>
+        <h4 class="text-indigo-600 text-6xl">03</h4>
+        <div class="flex justify-between items-center">
+          <h1 class="text-5xl w-max">WORK</h1>
+          <div class="w-2/5">
+            <p class="w-3/5 text-lg text-justify">
+              passionate cases that i passionately built for clients or friends
+              over the years.
+            </p>
+          </div>
+        </div>
+        <p class="text-indigo-600 text-sm pl-2">Featured projects</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 py-4 cards">
+        <div class="mt-10">
+          <Card
+            active={2}
+            title="ARTERM"
+            subtitle="Awesome Designs in AR and VR"
+          />
+        </div>
+        <div>
+          <Card title="ARTERM" />
+        </div>
+        <div>
+          <Card title="ARTERM" />
+        </div>
+        <div class="mt-10">
+          <Card
+            active={2}
+            title="ARTERM"
+            subtitle="Awesome Designs in AR and VR"
+          />
+        </div>
+      </div>
+      <div>
+        <p class="text-indigo-600 text-center mt-2">
+          <a href="/cases">
+            <span class="px-3 py-2 pb-6 border-b border-b-indigo-600"
+              >More Projects</span
+            >
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white text-slate-900 min-h-screen relative pb-20">
+    <div class="p-4 h-full">
+      <div>
+        <h4 class="text-indigo-600 text-6xl">04</h4>
+        <h1 class="text-5xl w-max">SKILLS</h1>
+      </div>
+      <p class="text-indigo-600 text-sm pl-2">Areas of expectise</p>
+    </div>
+    <div class="flex justify-evenly">
+      <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
+        <h1 class="text-4xl text-center mt-3 mb-6">FRONTEND DEVELOPMENT</h1>
+        <p class="text-xl my-3">
+          I like bringing ideas to life in the browser, with digital
+          innovations.
+        </p>
+        <div class="flex flex-wrap my-6">
+          {
+            skills.front.map((skill) => {
+              return (
+                <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
+                  {skill}
+                </span>
+              );
+            })
+          }
+        </div>
+      </div>
+      <div class="w-[30%] border border-indigo-500 rounded-2xl p-6">
+        <h1 class="text-4xl text-center mt-3 mb-6">BACKEND DEVELOPMENT</h1>
+        <p class="text-xl my-3">
+          Always finding solutions, i am passionate and hard working, aiming to
+          change the world for better.
+        </p>
+        <div class="flex flex-wrap my-6">
+          {
+            skills.back.map((skill) => {
+              return (
+                <span class="bg-indigo-50 text-indigo-600 border border-indigo-600 rounded-full px-3 py-1.5 m-1">
+                  {skill}
+                </span>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#101318] text-white min-h-screen relative pb-20">
+    <div class="h-96 bg-pattern border border-gray-700"></div>
+    <div class="grid grid-cols-2 !text-white items-center">
+      <div class="w-1/2 m-auto h-full">
+        <div class="w-full h-24 bg-logo"></div>
+        <p class="text-3xl">Creative Developer & Designer</p>
+      </div>
+      <div
+        class="bg-black grid grid-cols-5 h-64 items-center overflow-hidden gap-[0.5px]"
+      >
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+        <div class="verticle"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2">
+      <div class="">
+        <form class="w-2/3 m-auto">
+          <div>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl"
+            />
+          </div>
+          <div>
+            <textarea
+              name="content"
+              id="content"
+              placeholder="Content"
+              cols="1"
+              class="bg-slate-900 text-white w-full m-2 placeholder-white text-xl p-6 rounded-2xl resize-none"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="bg-indigo-600 text-xl px-14 py-6 rounded-full m-auto block"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-2">
+        <div>
+          <ul class="list-none">
+            {
+              links.site.map(({ route, page }) => (
+                <li class={`text-xl p-2 m-2`}>
+                  <a href={route}>{page}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <ul class="list-none">
+            {
+              links.social.map(({ route, page }) => (
+                <li class={`text-xl p-2 m-2`}>
+                  <a href={route}>{page}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-center">
+        Made with 💖 by <a href="/links" class="text-indigo-600"
+          >@uwenayoallain</a
+        >
+        {new Date().getFullYear()} with {Astro.generator}
+      </p>
     </div>
   </div>
   <script>

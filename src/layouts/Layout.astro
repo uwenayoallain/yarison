@@ -5,13 +5,20 @@ import "@fontsource/inter";
 interface Props {
   title?: string;
   className?: any;
+  barba: string;
+  namespace: string;
 }
 
-const { title = "Home", className = "" } = Astro.props as Props;
+const {
+  title = "Home",
+  className = "",
+  barba,
+  namespace,
+} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-barba="wrapper">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,8 +30,10 @@ const { title = "Home", className = "" } = Astro.props as Props;
     />
     <title>{title}</title>
   </head>
-  <body class={className} data-barba="wrapper" data-scroll-container>
-    <slot />
+  <body class={className} data-scroll-container>
+    <div data-barba-container={barba} data-barba-namespace={namespace}>
+      <slot />
+    </div>
     <script>
       import Animate from "../scripts/layout.js";
       Animate();
