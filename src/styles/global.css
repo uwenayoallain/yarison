@@ -45,91 +45,12 @@ div {
   background-image: url("data:image/svg+xml,%3Csvg width='161' height='52' viewBox='0 0 161 52' fill='none' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Cpath d='M144.634 36.0824V10.0382H149.99L152.388 22.5128V10.0382H157.419V36.0824H152.328L149.724 23.0603V36.0824H144.634Z' fill='white'%3E%3C/path%3E%3Cpath d='M124.805 36.3191C122.723 36.3191 121.13 35.6927 120.025 34.4398C118.93 33.1771 118.382 31.3569 118.382 28.9794V16.6085C118.382 14.3789 118.925 12.687 120.01 11.5328C121.105 10.3786 122.703 9.80147 124.805 9.80147C126.906 9.80147 128.499 10.3786 129.584 11.5328C130.679 12.687 131.227 14.3789 131.227 16.6085V28.9794C131.227 31.3569 130.674 33.1771 129.569 34.4398C128.474 35.6927 126.886 36.3191 124.805 36.3191ZM124.849 31.5246C125.638 31.5246 126.033 30.7601 126.033 29.231V16.5197C126.033 15.2372 125.648 14.596 124.879 14.596C124.01 14.596 123.576 15.252 123.576 16.5641V29.2606C123.576 30.0695 123.675 30.6516 123.872 31.0067C124.07 31.352 124.395 31.5246 124.849 31.5246Z' fill='white'%3E%3C/path%3E%3Cpath d='M100.625 36.3191C98.2475 36.3191 96.5309 35.7272 95.4754 34.5434C94.4296 33.3596 93.9068 31.4753 93.9068 28.8906V26.3454H99.0564V29.6009C99.0564 30.2027 99.1452 30.6762 99.3228 31.0215C99.5102 31.3569 99.8308 31.5246 100.285 31.5246C100.758 31.5246 101.084 31.3865 101.261 31.1103C101.449 30.8341 101.542 30.3803 101.542 29.7489C101.542 28.9498 101.464 28.2839 101.306 27.7512C101.148 27.2086 100.872 26.6956 100.477 26.2122C100.092 25.719 99.5546 25.1468 98.864 24.4957L96.526 22.276C94.7799 20.6285 93.9068 18.7443 93.9068 16.6233C93.9068 14.4036 94.4198 12.7117 95.4458 11.5476C96.4816 10.3835 97.9762 9.80147 99.9295 9.80147C102.317 9.80147 104.009 10.4378 105.005 11.7104C106.011 12.983 106.515 14.9166 106.515 17.5111H101.217V15.7206C101.217 15.3654 101.113 15.0892 100.906 14.8919C100.709 14.6946 100.438 14.596 100.092 14.596C99.6779 14.596 99.3721 14.7143 99.1748 14.9511C98.9874 15.178 98.8936 15.474 98.8936 15.839C98.8936 16.204 98.9923 16.5986 99.1896 17.0228C99.3869 17.447 99.7766 17.9353 100.359 18.4878L103.363 21.3733C103.964 21.9455 104.517 22.5522 105.02 23.1935C105.523 23.8248 105.928 24.5647 106.233 25.4131C106.539 26.2517 106.692 27.2777 106.692 28.4911C106.692 30.9377 106.238 32.8564 105.331 34.2474C104.433 35.6286 102.864 36.3191 100.625 36.3191Z' fill='white'%3E%3C/path%3E%3Cpath d='M77.1557 36.0824V10.0382H82.1869V36.0824H77.1557Z' fill='white' %3E%3C/path%3E%3Cpath d='M51.8219 36.0824V10.0382H59.8127C61.1445 10.0382 62.1508 10.3441 62.8315 10.9557C63.5121 11.5575 63.9659 12.4059 64.1928 13.5009C64.4296 14.5861 64.548 15.8636 64.548 17.3335C64.548 18.7541 64.3655 19.8886 64.0005 20.737C63.6453 21.5854 62.9696 22.1724 61.9732 22.498C62.792 22.6657 63.3642 23.0751 63.6897 23.7262C64.0251 24.3674 64.1928 25.201 64.1928 26.227V36.0824H59.058V25.8867C59.058 25.1271 58.9002 24.6585 58.5845 24.4809C58.2787 24.2934 57.7805 24.1997 57.0899 24.1997V36.0824H51.8219ZM57.1195 19.6864H58.3773C59.0975 19.6864 59.4576 18.9021 59.4576 17.3335C59.4576 16.3174 59.3786 15.6515 59.2208 15.3358C59.0629 15.0202 58.767 14.8623 58.3329 14.8623H57.1195V19.6864Z' fill='white'%3E%3C/path%3E%3Cpath d='M25.541 36.0824L28.0566 10.0382H36.8909L39.3621 36.0824H34.4345L34.0645 31.8798H30.9274L30.6018 36.0824H25.541ZM31.2973 27.7216H33.665L32.5255 14.4776H32.2888L31.2973 27.7216Z' fill='white'%3E%3C/path%3E%3Cpath d='M4.30616 36.0824V27.5144L0.147978 10.0382H5.31241L6.76259 18.8577L8.21278 10.0382H13.3624L9.21903 27.5144V36.0824H4.30616Z' fill='white'%3E%3C/path%3E%3Cline x1='93.2853' y1='49.3294' x2='161' y2='49.3294' stroke='%234F46E5' stroke-width='4.73529'%3E%3C/line%3E%3C/svg%3E");
 }
 
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden;
-}
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.has-scroll-smooth body {
-  overflow: hidden;
-}
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh;
-}
-
-[data-scroll-direction="horizontal"] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-[data-scroll-direction="horizontal"] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%;
-}
-
-.c-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
-}
-
-.c-scrollbar:hover {
-  transform: scaleX(1.45);
-}
-
-.c-scrollbar:hover,
-.has-scroll-scrolling .c-scrollbar,
-.has-scroll-dragging .c-scrollbar {
-  opacity: 1;
-}
-
-[data-scroll-direction="horizontal"] .c-scrollbar {
+html,
+body {
   width: 100%;
-  height: 10px;
-  top: auto;
-  bottom: 0;
-  transform: scaleY(1);
+  min-height: 100%;
 }
 
-[data-scroll-direction="horizontal"] .c-scrollbar:hover {
-  transform: scaleY(1.3);
-}
-
-.c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.has-scroll-dragging .c-scrollbar_thumb {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-  right: auto;
-  bottom: 0;
+html {
+  scroll-behavior: initial;
 }

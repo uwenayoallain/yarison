@@ -1,12 +1,31 @@
-import LocomotiveScroll from 'locomotive-scroll';
 import gsap from "gsap";
 import barba from "@barba/core";
+import Lenis from "@studio-freight/lenis";
 
 export default function Animate() {
-    new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true
-    });
+
+    const lenis = new Lenis({
+        duration: 1.6,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    })
+
+    //get scroll value
+    lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress })
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
     // function pageTransition() {
     //     gsap.to("#loader", {
     //         display: "block",

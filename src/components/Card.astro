@@ -3,14 +3,14 @@ import Images from "./Images.astro";
 interface Props {
     active?: number;
     title: string;
-    subtitle?: string;    
+    subtitle?: string;
 }
 
-const { active = 0, title, subtitle=title } = Astro.props as Props;
+const { active = 0, title, subtitle = title } = Astro.props as Props;
 ---
 
-<div class="w-3/4 m-auto cursor-pointer group relative">
-    <div class="card absolute inset-16"/>
+<div class="w-3/4 m-auto cursor-pointer group relative card-container">
+    <div class="card absolute inset-16"></div>
     <div>
         <Images active={active} className="rounded-xl" />
     </div>
